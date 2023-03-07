@@ -1,0 +1,41 @@
+For new Partner Integration
+
+Step 1:
+ Change Port in application.properties
+
+Step 2:
+Change the USERNAME_SDP and PASSWORD_SDP in Constants.java file
+
+Step 3:
+Change the PARTNER_ID in Constants.java file
+
+Step 4:
+Change the PARTNER_MO_URL in Constants.java file
+
+Step 5:
+
+Update the Service ID's for all short codes if partner is not in that shortcode then make the value Null
+For Example partner is on only 3441 so make the variables value like
+
+SERVICE_ID_3441= "333";
+SERVICE_ID_3443= null;
+SERVICE_ID_3444= null;
+SERVICE_ID_3445= null;
+
+Step 6:
+
+Update log path in logback-spring.xml at line 4
+
+Step 7:
+
+Update .log filename at line 17
+
+Step 8:
+Update zip file name on line 25
+
+
+
+
+
+
+

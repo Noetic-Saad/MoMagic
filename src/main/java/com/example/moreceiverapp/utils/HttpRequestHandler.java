@@ -70,10 +70,10 @@ public class HttpRequestHandler {
                 .build();
         MediaType mediaType = MediaType.parse("application/json");
         RequestBody body = RequestBody.create(mediaType, "{\n\t\"transId\":\"" + this.transId + "\",\n\t\"shortcode\":\"" + this.shortcode + "\",\n\t\"data\": \"" + this.data + "\",\n\t\"operatorId\" : \"" + this.operatorId + "\",\n\t\"msisdn\" : \"" + this.msisdn + "\",\n\t\"connectionPointId\" : \"" + this.connectionPointId + "\"\n}");
-        if (this.data.equalsIgnoreCase("MMBD25")) {
-            log.info("postback-url: " + Constants.PARTNER_MO_URL1);
+        if (this.data.startsWith("MMBD25")) {
+            log.info("postback-url | FOR | MMBD25 : " + Constants.PARTNER_MO_URL_FOR_MMBD25);
             Request request = new Request.Builder()
-                    .url(Constants.PARTNER_MO_URL1)
+                    .url(Constants.PARTNER_MO_URL_FOR_MMBD25)
                     .method("POST", body)
                     .addHeader("Content-Type", "application/json")
                     .build();

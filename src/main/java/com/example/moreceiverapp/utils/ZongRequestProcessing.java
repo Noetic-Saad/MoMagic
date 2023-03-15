@@ -182,6 +182,8 @@ public class ZongRequestProcessing {
                     chargingService.insertRecord(mydao);
                     todayChargedDTO = modelMapper.map(mydao, TodayChargedDTO.class);
                     todayChargedMsisdnService.updateRecord(todayChargedDTO, tempIdforUpdate);
+                    log.info("UPDATED RECORD in today_tbl_billing FOR MSISDN | " + todayChargedDTO.getSubscriberNumber());
+
 
 
 

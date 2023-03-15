@@ -10,7 +10,7 @@ public class Constants {
     //############################## Changes Required For Partners ###############################################
     public static int PARTNER_ID = 19;
     public static String PARTNER_MO_URL = "http://api.centili.com/pp/common/noetic/new_premium/mosms";
-    public static String PARTNER_MO_URL1 ="http://mmtpkbilling.momagic.mobi/";
+    public static String PARTNER_MO_URL_FOR_MMBD25 ="http://mmtpkbilling.momagic.mobi/";
     //######## If partner has no service on any of the short code then add null there
 //    ######## For Example SERVICE_ID_3441 = null
     public static String SERVICE_ID_3441 ="1189";

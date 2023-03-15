@@ -169,6 +169,7 @@ public class ZongSecondRequestProcessing {
                     chargingService.insertRecord(mydao);
 //                    todayChargedDTO = modelMapper.map(mydao, TodayChargedDTO.class);
                     todayChargedMsisdnService.updateRecord(todayChargedDTO, todayChargedEntity.getId());
+                    log.info("UPDATED RECORD in today_tbl_billing FOR MSISDN | " + todayChargedDTO.getSubscriberNumber());
 
                     // Insert into Today TBL Charging DB
 //                                mydao2= new TodayChargedEntity(incomingPacket.getSmsId(),
@@ -217,6 +218,7 @@ public class ZongSecondRequestProcessing {
                     chargingService.insertRecord(mydao);
                     todayChargedDTO = modelMapper.map(mydao, TodayChargedDTO.class);
                     todayChargedMsisdnService.updateRecord(todayChargedDTO, todayChargedEntity.getId());
+                    log.info("UPDATED RECORD in today_tbl_billing FOR MSISDN | " + todayChargedDTO.getSubscriberNumber());
                     if (code == null)
                         log.info("Null Value Received in Zong Response");
                     else {}

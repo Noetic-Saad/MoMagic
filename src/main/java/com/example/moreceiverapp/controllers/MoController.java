@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MoController {
 
     private final ProcessSMSService processSMSService;
-    private static final Logger log = LoggerFactory.getLogger(ProcessSMSServiceImpl.class.getName());
+    private static final Logger log = LoggerFactory.getLogger(MoController.class);
 
 
     public MoController(ProcessSMSService processSMSRequest) {
@@ -32,6 +32,7 @@ public class MoController {
             method = RequestMethod.POST,
             consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE})
     public @ResponseBody ResponseEntity<?> getObject(@RequestBody MultiValueMap<Object,Object> object) {
+        System.out.println("Start");
         JmsMessage moDTO = new JmsMessage();
         moDTO.setSmsText((String) object.get("data").get(0));
         moDTO.setSmsId((Integer.parseInt((String)object.get("transId").get(0))));
